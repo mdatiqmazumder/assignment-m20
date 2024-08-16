@@ -7,32 +7,35 @@
     <title>Create New Contact</title>
 </head>
 <body>
+    <h1>Create New Contact</h1>
+    <hr>
     <form action="{{ route('contacts.store') }}" method="POST">
 
-        <label for="name">Enter Name</label>
+        <label for="name">Enter Name</label><br>
         <input type="text" name="name" id="name" value="{{ old('name') }}">
-        <br>
+        <br><br>
 
 
-        <label for="email">Enter Email</label>
+        <label for="email">Enter Email</label><br>
         <input type="email" name="email" id="email" value="{{ old('email') }}">
-        <br>
+        <br><br>
 
 
-        <label for="phone">Enter Phone</label>
+        <label for="phone">Enter Phone</label><br>
         <input type="text" name="phone" id="phone" value="{{ old('phone') }}">
-        <br>
+        <br><br>
 
 
-        <label for="address">Enter Address</label>
+        <label for="address">Enter Address</label><br>
         <textarea name="address"  id="address" cols="30" rows="10">{{ old('address') }}</textarea>
-        <br>
+        <br><br>
 
         @csrf
         <button type="submit" >Save</button>
     </form>
+    <br><br>
 
-    <a href="{{ route('contacts.index') }}">Dashboard</a>
+    <a href="{{ route('contacts.index') }}">Go to Dashboard</a>
     {{-- check for errors --}}
     @if($errors->any())
         <ul>

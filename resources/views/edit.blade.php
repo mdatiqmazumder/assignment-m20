@@ -9,30 +9,32 @@
 <body>
     <form action="{{ route('contacts.update',$contact) }}" method="POST">
 
-        <label for="name">Enter Name</label>
+        <label for="name">Enter Name</label><br>
         <input type="text" name="name" id="name" value="{{ $contact->name }}">
-        <br>
+        <br><br>
 
 
-        <label for="email">Enter Email</label>
+        <label for="email">Enter Email</label><br>
         <input type="email" name="email" id="email" value="{{ $contact->email }}">
-        <br>
+        <br><br>
 
 
-        <label for="phone">Enter Phone</label>
+        <label for="phone">Enter Phone</label><br>
         <input type="text" name="phone" id="phone" value="{{ $contact->phone }}">
-        <br>
+        <br><br>
 
 
-        <label for="address">Enter Address</label>
+        <label for="address">Enter Address</label><br>
         <textarea name="address"  id="address" cols="30" rows="10">{{ $contact->address }}</textarea>
-        <br>
+        <br><br>
 
         @csrf
         @method('PUT')
+
         <button type="submit" >Save</button>
     </form>
 
+    <br>
     <a href="{{ route('contacts.index') }}">Back to dashboard</a>
     {{-- check for errors --}}
     @if($errors->any())

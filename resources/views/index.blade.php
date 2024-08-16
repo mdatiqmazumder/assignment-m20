@@ -20,7 +20,8 @@
     <a href="{{ route('contacts.index') }}">Dashboard</a> | <a href="{{ route('contacts.create') }}">Create New
         Contact</a> | <a href="{{ route('contacts.index', ['sort' => 'name']) }}">sort by name</a>| <a
         href="{{ route('contacts.index', ['sort' => 'created_at']) }}">sort by creation date</a>
-    <table border="1">
+    <br><br>
+        <table border="1">
         <tr>
             <th>ID</th>
             <th>Name</th>
